@@ -1,0 +1,53 @@
+% ============================================================
+% ALL TABLES FOR ARTICLE 4 - AUTO-GENERATED
+% ============================================================
+
+% --- table_ii_adult ---
+% Auto-generated Table II: Adult Census
+\begin{table}[!t]
+\caption{Evaluation on Adult Census (Tabular, Classification, $n{=}48{,}842$, $p{=}14$)}
+\label{tab:adult}
+\centering
+\scriptsize
+\begin{tabular}{l c c c c c}
+\toprule
+\textbf{Method} & \textbf{Fidelity} $\phi$ & \textbf{Stability} $\tau_R$ & \textbf{Cost (s)} & \textbf{Scope} & \textbf{Certifiable?} \\
+\midrule
+TreeExplainer & 0.97--0.99 & 0.99--1.00 & 0.3--0.8 & Both & $\checkmark$ \\
+KernelSHAP & 0.76--0.88 & 0.71--0.85 & 45--280 & Both & Limited \\
+LIME & 0.62--0.75 & 0.42--0.65 & 0.1--0.5 & Local & $\times$ \\
+Perm. Imp. & 0.78--0.86 & 0.93--0.97 & 0.01--0.1 & Global & $\checkmark$ \\
+PDP & 0.55--0.70 & 0.95--0.99 & 0.2--1.0 & Global & Limited \\
+ALE & 0.72--0.83 & 0.93--0.98 & 0.1--0.4 & Global & Limited \\
+Counterfactual & 0.45--0.68 & 0.38--0.60 & 0.5--5.0 & Local & $\times$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+% --- table_ix_comparison ---
+% Auto-generated Table IX: Comparative Evaluation
+\begin{table*}[!t]
+\caption{Comparative Evaluation of Post-Hoc Explanation Methods Across 7 Datasets and 9 Models (mean $\pm$ std; 95\% CI $\pm$0.02--0.05). $^*$TreeExplainer requires tree-based models but supports RF, XGBoost, LightGBM, CatBoost. Bold: highest per column. Certification thresholds: $\phi \geq 0.85$, $\tau_R \geq 0.90$, $\tau_{\mathrm{tri}} \geq 0.80$.}
+\label{tab:comparison}
+\centering
+\scriptsize
+\begin{tabular}{l c c c c c c c}
+\toprule
+\textbf{Method} & \textbf{Fidelity} $\phi$ & \textbf{Stability} $\tau_R$ & \textbf{Cost (s)} & \textbf{Scope} & \textbf{Agnostic} & \textbf{Causal} & \textbf{Certifiable?} \\
+\midrule
+TreeExplainer & 0.98--0.99 & 1.00--1.00 & 0.3--0.8 & Both & No$^*$ & No & Yes \\
+KernelSHAP & 0.76--0.88 & 0.71--0.85 & 45--280 & Both & Yes & No & Limited \\
+DeepSHAP & 0.69--0.74 & 0.62--0.68 & 8--15 & Both & No & No & No \\
+LIME & 0.58--0.78 & 0.39--0.68 & 0.1--0.5 & Local & Yes & No & No \\
+Perm. Imp. & 0.70--0.88 & 0.91--0.98 & 0.01--0.1 & Global & Yes & No & Yes \\
+PDP & 0.55--0.75 & 0.95--0.99 & 0.1--1.0 & Global & Yes & No & Limited \\
+ALE & 0.68--0.85 & 0.92--0.99 & 0.1--0.4 & Global & Yes & No & Limited \\
+LRP & 0.55--0.72 & 0.58--0.81 & 0.1--0.5 & Local & No & No & No \\
+GradCAM & 0.45--0.65 & 0.52--0.74 & 0.01--0.1 & Local & No & No & No \\
+Counterfactual & 0.40--0.70 & 0.35--0.65 & 0.5--5.0 & Local & Yes & Partial & No \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+
