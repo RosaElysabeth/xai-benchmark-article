@@ -38,6 +38,14 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+
+# CSS
+css_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "shared_xai.css")
+if os.path.exists(css_path):
+    with open(css_path, "r", encoding="utf-8") as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
+
 # ========================================================================
 # LANGUAGE TOGGLE (in sidebar)
 # ========================================================================
@@ -152,7 +160,7 @@ elif page == t("nav_table_ix", lang):
             return "background-color: #ffcdd2"
         return ""
     
-    styled = display_df.style.applymap(highlight_certifiable, subset=[col_map["Certifiable"]])
+    styled = display_df.style.map(highlight_certifiable, subset=[col_map["Certifiable"]])
     st.dataframe(styled, use_container_width=True, hide_index=True)
     
     st.markdown(f"*{t('table_ix_note', lang)}*")
@@ -496,7 +504,7 @@ elif page == t("nav_benchmark", lang):
                     for method_name in eval_methods:
                         methods_done += 1
                         progress.progress(
-                            40 + int(50 * methods_done / total_methods),
+                            min(95, 40 + int(50 * methods_done / total_methods)),
                             text=f"Evaluating {method_name} on {model_name}..." if lang == "en" else f"Évaluation de {method_name} sur {model_name}..."
                         )
                         try:
@@ -671,8 +679,7 @@ elif page == t("nav_article", lang):
 # ========================================================================
 
 st.markdown("---")
-footer_text = {
-    "en": "XAI Benchmark — Article 4 | [GitHub](https://github.com/RosaElysabeth/xai-benchmark-article)",
-    "fr": "Benchmark XAI — Article 4 | [GitHub](https://github.com/RosaElysabeth/xai-benchmark-article)",
-}
-st.markdown(footer_text[lang])
+st.markdown("""<div style="text-align:center;color:#6b7280;font-size:.85rem;padding:1rem 0;">
+    XAI Benchmark | Predict • Explain • Certify |
+    <a href="https://github.com/RosaElysabeth/xai-benchmark-article" target="_blank" style="color:#2e86c1;">GitHub</a>
+</div>""", unsafe_allow_html=True)
