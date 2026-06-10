@@ -39,6 +39,9 @@ st.set_page_config(
 )
 
 
+# Font Awesome CDN
+st.markdown('<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">', unsafe_allow_html=True)
+
 # CSS
 css_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "shared_xai.css")
 if os.path.exists(css_path):
@@ -629,13 +632,17 @@ elif page == t("nav_article", lang):
     st.markdown("---")
     st.markdown(f"### {t('article_citation', lang)}")
     
-    bibtex = """@article{ralinirina2024comparative,
+    bibtex = """@article{ralinirina2026comparative,
   title={A Comparative Evaluation of Post-Hoc Explanation Methods for Predictive Modeling: Strengths, Limitations, and Selection Guidelines},
   author={Ralinirina, Rosa Elysabeth and Ralaivao, Jean Christian and Ralaivao, Niaiko Michaël and Ratovondrahona, Alain Josué and Mahatody, Thomas},
   journal={IEEE Access},
-  year={2024}
+  note={Submitted},
+  year={2026}
 }"""
     st.code(bibtex, language="bibtex")
+    
+    submitted_note = "*Submitted for review, 2026.*" if lang == "en" else "*Soumis pour révision, 2026.*"
+    st.markdown(submitted_note)
     
     # Triangulation
     st.markdown("---")
@@ -680,6 +687,7 @@ elif page == t("nav_article", lang):
 
 st.markdown("---")
 st.markdown("""<div style="text-align:center;color:#6b7280;font-size:.85rem;padding:1rem 0;">
-    XAI Benchmark | Predict • Explain • Certify |
-    <a href="https://github.com/RosaElysabeth/xai-benchmark-article" target="_blank" style="color:#2e86c1;">GitHub</a>
+    XAI Benchmark | <i class="fa-solid fa-flask"></i> Predict • <i class="fa-solid fa-magnifying-glass"></i> Explain • <i class="fa-solid fa-shield-halved"></i> Certify |
+    <a href="https://orcid.org/0009-0003-3048-1765" target="_blank" style="color:#a6ce39;"><i class="fa-brands fa-orcid"></i> Rosa Elysabeth Ralinirina</a> |
+    <a href="https://github.com/RosaElysabeth/xai-benchmark-article" target="_blank" style="color:#2e86c1;"><i class="fa-brands fa-github"></i> GitHub</a>
 </div>""", unsafe_allow_html=True)

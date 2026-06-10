@@ -157,11 +157,12 @@ The app uses only pre-computed results by default, so it loads instantly on Stre
 ## 📝 Citation
 
 ```bibtex
-@article{ralinirina2024comparative,
+@article{ralinirina2026comparative,
   title={A Comparative Evaluation of Post-Hoc Explanation Methods for Predictive Modeling: Strengths, Limitations, and Selection Guidelines},
   author={Ralinirina, Rosa Elysabeth and Ralaivao, Jean Christian and Ralaivao, Niaiko Michaël and Ratovondrahona, Alain Josué and Mahatody, Thomas},
   journal={IEEE Access},
-  year={2024}
+  note={Submitted},
+  year={2026}
 }
 ```
 
