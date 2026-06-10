@@ -30,3 +30,5 @@ results/*.json
 
 # Jupyter
 .ipynb_checkpoints/
+# Streamlit
+*.streamlit/
