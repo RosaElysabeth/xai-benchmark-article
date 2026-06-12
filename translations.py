@@ -32,7 +32,7 @@ TRANSLATIONS = {
     },
     "overview_methods": {"en": "10 Explanation Methods", "fr": "10 Méthodes d'Explication"},
     "overview_datasets": {"en": "7 Datasets", "fr": "7 Datasets"},
-    "overview_models": {"en": "9 Models", "fr": "9 Modèles"},
+    "overview_models": {"en": "10 Models", "fr": "10 Modèles"},
     "overview_axes": {"en": "6 Evaluation Axes", "fr": "6 Axes d'Évaluation"},
     "overview_certifiable_title": {"en": "Certifiable Methods", "fr": "Méthodes Certifiables"},
     "overview_certifiable_text": {
@@ -43,8 +43,8 @@ TRANSLATIONS = {
     # --- Table IX ---
     "table_ix_title": {"en": "Table IX — Comparative Evaluation", "fr": "Tableau IX — Évaluation Comparative"},
     "table_ix_subtitle": {
-        "en": "Across 7 datasets and 9 models (mean range; 95% CI ±0.02–0.05)",
-        "fr": "Sur 7 datasets et 9 modèles (intervalle moyen ; IC 95% ±0,02–0,05)",
+        "en": "Across 7 datasets and 10 models (mean range; 95% CI ±0.02–0.05)",
+        "fr": "Sur 7 datasets et 10 modèles (intervalle moyen ; IC 95% ±0,02–0,05)",
     },
     "table_ix_note": {
         "en": "*TreeExplainer requires tree-based models but supports RF, XGBoost, LightGBM, CatBoost.",
@@ -123,8 +123,8 @@ TRANSLATIONS = {
         "fr": "Exécutez un benchmark rapide sur le dataset Adult Census (~2 min). Ceci démontre le pipeline d'évaluation avec 2 modèles et 3 méthodes.",
     },
     "benchmark_warning": {
-        "en": "⚠️ This is a **quick demo** with reduced parameters. Full benchmark (7 datasets × 9 models × 10 methods) takes ~48h. Article results use full parameters.",
-        "fr": "⚠️ Ceci est une **démo rapide** avec des paramètres réduits. Le benchmark complet (7 datasets × 9 modèles × 10 méthodes) prend ~48h. Les résultats de l'article utilisent les paramètres complets.",
+        "en": "⚠️ This is a **quick demo** with reduced parameters. Full benchmark (7 datasets × 10 models × 10 methods) takes ~48h. Article results use full parameters.",
+        "fr": "⚠️ Ceci est une **démo rapide** avec des paramètres réduits. Le benchmark complet (7 datasets × 10 modèles × 10 méthodes) prend ~48h. Les résultats de l'article utilisent les paramètres complets.",
     },
     "benchmark_button": {"en": "🚀 Run Quick Benchmark", "fr": "🚀 Lancer le Benchmark Rapide"},
     "benchmark_running": {"en": "Running benchmark...", "fr": "Exécution du benchmark..."},

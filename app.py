@@ -109,7 +109,7 @@ if page == t("nav_overview", lang):
     col1, col2, col3, col4 = st.columns(4)
     col1.metric(t("overview_methods", lang), "10")
     col2.metric(t("overview_datasets", lang), "7")
-    col3.metric(t("overview_models", lang), "9")
+    col3.metric(t("overview_models", lang), "10")
     col4.metric(t("overview_axes", lang), "6")
     
     st.markdown("---")
@@ -630,19 +630,6 @@ elif page == t("nav_article", lang):
     st.markdown(t("article_abstract", lang))
     
     st.markdown("---")
-    st.markdown(f"### {t('article_citation', lang)}")
-    
-    bibtex = """@article{ralinirina2026comparative,
-  title={A Comparative Evaluation of Post-Hoc Explanation Methods for Predictive Modeling: Strengths, Limitations, and Selection Guidelines},
-  author={Ralinirina, Rosa Elysabeth and Ralaivao, Jean Christian and Ralaivao, Niaiko Michaël and Ratovondrahona, Alain Josué and Mahatody, Thomas},
-  journal={IEEE Access},
-  note={Submitted},
-  year={2026}
-}"""
-    st.code(bibtex, language="bibtex")
-    
-    submitted_note = "*Submitted for review, 2026.*" if lang == "en" else "*Soumis pour révision, 2026.*"
-    st.markdown(submitted_note)
     
     # Triangulation
     st.markdown("---")

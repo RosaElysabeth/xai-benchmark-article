@@ -8,7 +8,7 @@ Authors: Ralinirina, Ralaivao, Ralaivao, Ratovondrahona, Mahatody
 
 ## 🚀 Live Demo
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_default_badge.svg)](https://xai-benchmark-article4.streamlit.app/)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_default_badge.svg)](https://xai-benchmark-article.streamlit.app/)
 
 Interactive dashboard with pre-computed results (instant), bilingual (FR/EN), and live benchmark demo.
 
@@ -55,8 +55,8 @@ xai-benchmark-article/
 ├── app.py                          # Streamlit dashboard (bilingual FR/EN)
 ├── precomputed_results.py          # Article reference data (instant)
 ├── translations.py                 # FR/EN translations
-├── requirements.txt                 # Dependencies
-├── README.md                        # This file
+├── requirements.txt                # Dependencies
+├── README.md                       # This file
 ├── scripts/
 │   ├── run_benchmark.py             # Full benchmark (~48h GPU + 120h CPU)
 │   ├── instant_benchmark.py         # Quick demo (~2 min)
@@ -131,40 +131,13 @@ python scripts/run_benchmark.py --figures
 | **Agnosticity** | Yes/No | Model-agnostic or model-specific |
 | **Causality** | Yes/No/Partial | Causal guarantees |
 
-### 8 Methods × 9 Models × 7 Datasets
+### 8 Methods × 10 Models × 7 Datasets
 
 **Datasets**: Adult Census, German Credit, California Housing, CIFAR-10, ISIC 2019, PhysioNet ECG, Electricity
 
 **Models**: Logistic/Ridge, Decision Tree, EBM, Random Forest, XGBoost, LightGBM, CatBoost, MLP, ResNet-18, LSTM
 
 **XAI Methods**: TreeExplainer, KernelSHAP, DeepSHAP, LIME, Permutation Importance, PDP, ALE, LRP, GradCAM, Counterfactual
-
----
-
-## 🌐 Deployment on Streamlit Cloud
-
-1. Push this repo to GitHub
-2. Go to [share.streamlit.io](https://share.streamlit.io/)
-3. Connect your GitHub repo
-4. Set main file: `app.py`
-5. Set Python version: 3.10+
-6. Deploy!
-
-The app uses only pre-computed results by default, so it loads instantly on Streamlit Cloud.
-
----
-
-## 📝 Citation
-
-```bibtex
-@article{ralinirina2026comparative,
-  title={A Comparative Evaluation of Post-Hoc Explanation Methods for Predictive Modeling: Strengths, Limitations, and Selection Guidelines},
-  author={Ralinirina, Rosa Elysabeth and Ralaivao, Jean Christian and Ralaivao, Niaiko Michaël and Ratovondrahona, Alain Josué and Mahatody, Thomas},
-  journal={IEEE Access},
-  note={Submitted},
-  year={2026}
-}
-```
 
 ---
 

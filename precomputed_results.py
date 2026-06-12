@@ -9,7 +9,7 @@ import pandas as pd
 import numpy as np
 
 # ========================================================================
-# TABLE IX — Main comparative evaluation (7 datasets × 9 models)
+# TABLE IX — Main comparative evaluation (7 datasets × 10 models)
 # ========================================================================
 
 TABLE_IX = {
